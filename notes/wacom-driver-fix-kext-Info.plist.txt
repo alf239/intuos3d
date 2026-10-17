@@ -1,0 +1,30 @@
+{
+  "BuildMachineOSBuild" => "15C50"
+  "CFBundleDevelopmentRegion" => "English"
+  "CFBundleGetInfoString" => "6.3.15-3 Copyright © 2007-2015 WACOM Technology"
+  "CFBundleIdentifier" => "com.wacom.kext.wacomtablet"
+  "CFBundleInfoDictionaryVersion" => "6.0"
+  "CFBundlePackageType" => "KEXT"
+  "CFBundleShortVersionString" => "Wacom Tablet 6.3.15-3"
+  "CFBundleSignature" => "????"
+  "CFBundleSupportedPlatforms" => [
+    0 => "MacOSX"
+  ]
+  "CFBundleVersion" => "6.3.15"
+  "DTCompiler" => "com.apple.compilers.llvm.clang.1_0"
+  "DTPlatformBuild" => "7C68"
+  "DTPlatformVersion" => "GM"
+  "DTSDKBuild" => "15C43"
+  "DTSDKName" => "macosx10.11"
+  "DTXcode" => "0720"
+  "DTXcodeBuild" => "7C68"
+  "IOKitPersonalities" => {
+    "Tablet" => {
+      "CFBundleIdentifier" => "com.wacom.kext.wacomtablet"
+      "IOClass" => "IOHIDEventDriver"
+      "IOProviderClass" => "IOHIDInterface"
+      "SupportsInk" => 1
+      "VendorID" => 1386
+    }
+  }
+}

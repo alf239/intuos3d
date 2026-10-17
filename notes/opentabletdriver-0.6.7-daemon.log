@@ -1,0 +1,10 @@
+[RootHub:Debug]	Initialized internal child hubs: HidSharpDeviceRootHub
+[Settings:Info]	The preset directory '/Users/alf/Library/Application Support/OpenTabletDriver/Presets' has been created
+[Detect:Info]	No tablets were detected.
+[Settings:Debug]	Using OpenTabletDriver application data directory: /Users/alf/Library/Application Support/OpenTabletDriver
+[AssemblyLoadContext.Unloading:Info]	Terminating daemon..
+[closeDaemon:Info]	Waiting for daemon to terminate
+[IPC:Debug]	Connected to a client.
+[IPC:Debug]	Disconnected from a client.
+[ProgramMain:Info]	Daemon gracefully stopped
+[closeDaemon:Info]	Waiting for daemon finished

@@ -1,0 +1,226 @@
++-o PTZ-630@00146400  <class IOUSBHostDevice, id 0x10001be5b, registered, matched, active, busy 0 (42 ms), retain 30>
+  | {
+  |   "sessionID" = 2366247033402
+  |   "USBSpeed" = 1
+  |   "UsbLinkSpeed" = 12000000
+  |   "idProduct" = 177
+  |   "iManufacturer" = 1
+  |   "bDeviceClass" = 0
+  |   "IOPowerManagement" = {"PowerOverrideOn"=Yes,"CapabilityFlags"=32768,"MaxPowerState"=2,"DevicePowerState"=2,"DriverPowerState"=0,"ChildrenPowerState"=2,"CurrentPowerState"=2}
+  |   "bcdDevice" = 258
+  |   "bMaxPacketSize0" = 8
+  |   "iProduct" = 2
+  |   "iSerialNumber" = 0
+  |   "bNumConfigurations" = 1
+  |   "UsbDeviceSignature" = <6a05b100000000030102>
+  |   "USB Product Name" = "PTZ-630"
+  |   "locationID" = 1336320
+  |   "bDeviceSubClass" = 0
+  |   "bcdUSB" = 272
+  |   "USB Address" = 14
+  |   "kUSBCurrentConfiguration" = 1
+  |   "IOCFPlugInTypes" = {"9dc7b780-9ec0-11d4-a54f-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  |   "UsbPowerSinkAllocation" = 300
+  |   "bDeviceProtocol" = 0
+  |   "USBPortType" = 0
+  |   "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  |   "USB Vendor Name" = "Tablet"
+  |   "Device Speed" = 1
+  |   "idVendor" = 1386
+  |   "kUSBProductString" = "PTZ-630"
+  |   "kUSBAddress" = 14
+  |   "kUSBVendorString" = "Tablet"
+  | }
+  | 
+  +-o AppleUSBHostCompositeDevice  <class AppleUSBHostCompositeDevice, id 0x10001be5f, !registered, !matched, active, busy 0, retain 4>
+  |   {
+  |     "IOProbeScore" = 50000
+  |     "CFBundleIdentifier" = "com.apple.driver.usb.AppleUSBHostCompositeDevice"
+  |     "IOProviderClass" = "IOUSBHostDevice"
+  |     "IOClass" = "AppleUSBHostCompositeDevice"
+  |     "IOPersonalityPublisher" = "com.apple.driver.usb.AppleUSBHostCompositeDevice"
+  |     "bDeviceSubClass" = 0
+  |     "CFBundleIdentifierKernel" = "com.apple.driver.usb.AppleUSBHostCompositeDevice"
+  |     "IOMatchedAtBoot" = Yes
+  |     "IOMatchCategory" = "IODefaultMatchCategory"
+  |     "IOPrimaryDriverTerminateOptions" = Yes
+  |     "bDeviceClass" = 0
+  |   }
+  |   
+  +-o IOUSBHostInterface@0  <class IOUSBHostInterface, id 0x10001be60, registered, matched, active, busy 0 (38 ms), retain 11>
+  | | {
+  | |   "USBSpeed" = 1
+  | |   "iInterface" = 0
+  | |   "bInterfaceProtocol" = 2
+  | |   "bAlternateSetting" = 0
+  | |   "idProduct" = 177
+  | |   "bcdDevice" = 258
+  | |   "USB Product Name" = "PTZ-630"
+  | |   "locationID" = 1336320
+  | |   "bInterfaceClass" = 3
+  | |   "bInterfaceSubClass" = 1
+  | |   "IOCFPlugInTypes" = {"2d9786c6-9ef3-11d4-ad51-000a27052861"="IOUSBHostFamily.kext/Contents/PlugIns/IOUSBLib.bundle"}
+  | |   "UsbExclusiveOwner" = "AppleUserUSBHostHIDDevice"
+  | |   "USBPortType" = 0
+  | |   "bConfigurationValue" = 1
+  | |   "bInterfaceNumber" = 0
+  | |   "USB Vendor Name" = "Tablet"
+  | |   "IOServiceDEXTEntitlements" = (("com.apple.developer.driverkit.transport.usb"))
+  | |   "idVendor" = 1386
+  | |   "IODEXTMatchCount" = 1
+  | |   "bNumEndpoints" = 1
+  | | }
+  | | 
+  | +-o AppleUserUSBHostHIDDevice  <class AppleUserHIDDevice, id 0x10001be67, registered, matched, active, busy 0 (15 ms), retain 15>
+  |   | {
+  |   |   "kOSBundleDextUniqueIdentifier" = <b796d15d9354eae826f370c78da5a69a0107352f2c064353231d0efec890df26>
+  |   |   "IOGeneralInterest" = "IOCommand is not serializable"
+  |   |   "DeviceOpenedByEventSystem" = Yes
+  |   |   "PrimaryUsagePage" = 1
+  |   |   "MaxInputReportSize" = 10
+  |   |   "IOUserClientClass" = "IOHIDLibUserClient"
+  |   |   "VersionNumber" = 258
+  |   |   "VendorID" = 1386
+  |   |   "ReportDescriptor" = <05010902a10185010901a100050919012903150025019503750181029505810305010930093109381581257f750895038106c0c0050d0901a1018502090075089509150026ff008102093a25029501b1028503090026ff00b1028504093a2501b1028505090026ff009508b10285060900b102850709009504b10285080900b102850909009501b102850a09009502b102850b09009501b102850c090095098102850d09009501b102c0>
+  |   |   "DebugState" = {"InputReportCount"=47508,"InputReportTime"=997623126916}
+  |   |   "IOUserServerOneProcess" = Yes
+  |   |   "BootProtocol" = 2
+  |   |   "MaxFeatureReportSize" = 9
+  |   |   "RequiresTCCAuthorization" = Yes
+  |   |   "Product" = "PTZ-630"
+  |   |   "Transport" = "USB"
+  |   |   "Elements" = ({"ReportID"=0,"ElementCookie"=1,"CollectionType"=1,"Type"=513,"VariableSize"=0,"Elements"=({"ReportID"=0,"ElementCookie"=2,"CollectionType"=0,"Type"=513,"VariableSize"=0,"Elements"=({"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=9,"Max"=1,"IsArray"=No,"Type"=2,"Size"=1,"Min"=0,"Flags"=134217730,"ReportID"=1,"Usage"=1,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=32},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=9,"Max"=1,"IsArray"=No,"Type"=2,"Size"=1,"Min"=0,"Flags"=134217730,"ReportID"=1,"Usage"=2,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=33},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=9,"Max"=1,"IsArray"=No,"Type"=2,"Size"=1,"Min"=0,"Flags"=134217730,"ReportID"=1,"Usage"=3,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=34},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=Yes,"UsagePage"=1,"Max"=127,"IsArray"=No,"Type"=1,"Size"=8,"Min"=18446744073709551489,"Flags"=134217734,"ReportID"=1,"Usage"=48,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=18446744073709551489,"IsWrapping"=No,"ScaledMax"=127,"ElementCookie"=35},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=Yes,"UsagePage"=1,"Max"=127,"IsArray"=No,"Type"=1,"Size"=8,"Min"=18446744073709551489,"Flags"=134217734,"ReportID"=1,"Usage"=49,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=18446744073709551489,"IsWrapping"=No,"ScaledMax"=127,"ElementCookie"=36},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=Yes,"UsagePage"=1,"Max"=127,"IsArray"=No,"Type"=1,"Size"=8,"Min"=18446744073709551489,"Flags"=134217734,"ReportID"=1,"Usage"=56,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=18446744073709551489,"IsWrapping"=No,"ScaledMax"=127,"ElementCookie"=37}),"UsagePage"=1,"Usage"=1}),"UsagePage"=1,"Usage"=2},{"ReportID"=0,"ElementCookie"=3,"CollectionType"=1,"Type"=513,"VariableSize"=0,"Elements"=({"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=1,"Size"=72,"Min"=0,"Flags"=2,"ReportID"=2,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=72,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=38},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=1,"Size"=72,"Min"=0,"Flags"=2,"ReportID"=12,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=72,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=39},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=2,"IsArray"=No,"Type"=257,"Size"=8,"Min"=0,"Flags"=2,"ReportID"=2,"Usage"=58,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=2,"ElementCookie"=40},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=257,"Size"=8,"Min"=0,"Flags"=2,"ReportID"=3,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=41},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=1,"IsArray"=No,"Type"=257,"Size"=8,"Min"=0,"Flags"=2,"ReportID"=4,"Usage"=58,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=42},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=257,"Size"=64,"Min"=0,"Flags"=2,"ReportID"=5,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=64,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=43},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=257,"Size"=64,"Min"=0,"Flags"=2,"ReportID"=6,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=64,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=44},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=257,"Size"=32,"Min"=0,"Flags"=2,"ReportID"=7,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=32,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=45},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=257,"Size"=32,"Min"=0,"Flags"=2,"ReportID"=8,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=32,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=46},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=257,"Size"=8,"Min"=0,"Flags"=2,"ReportID"=9,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=47},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=257,"Size"=16,"Min"=0,"Flags"=2,"ReportID"=10,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=16,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=48},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=257,"Size"=8,"Min"=0,"Flags"=2,"ReportID"=11,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=49},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=13,"Max"=255,"IsArray"=No,"Type"=257,"Size"=8,"Min"=0,"Flags"=2,"ReportID"=13,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=255,"ElementCookie"=50}),"UsagePage"=13,"Usage"=1},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=0,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=5},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=0,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=4},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=1,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=7},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=1,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=6},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=2,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=9},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=2,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=8},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=3,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=11},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=3,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=10},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=4,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=13},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=4,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=12},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=5,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=15},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=5,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=14},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=6,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=17},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=6,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=16},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=7,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=19},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=7,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=18},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=8,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=21},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=8,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=20},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=9,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=23},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=9,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=22},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=10,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=25},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=10,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=24},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=11,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=27},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=11,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=26},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=12,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=29},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=12,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=28},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=0,"IsArray"=Yes,"Type"=5,"Size"=0,"Min"=0,"Flags"=0,"ReportID"=13,"Usage"=18446744073709551615,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=0,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=0,"ElementCookie"=31},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=0,"Max"=1,"IsArray"=Yes,"Type"=5,"Size"=1,"Min"=0,"Flags"=0,"ReportID"=13,"Usage"=0,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=30})
+  |   |   "HIDRMDeviceState" = "Unknown"
+  |   |   "IOServiceDEXTEntitlements" = "com.apple.developer.driverkit.family.hid.device"
+  |   |   "IOUserClasses" = ("AppleUserUSBHostHIDDevice","IOUserUSBHostHIDDevice","IOUserHIDDevice","IOHIDDevice","IOService","OSObject")
+  |   |   "Manufacturer" = "Tablet"
+  |   |   "IOUserServerCDHash" = "c1f9f34e045f400acaeb6a4fce11f184ac894e22"
+  |   |   "ProductID" = 177
+  |   |   "RegisterService" = No
+  |   |   "DeviceUsagePairs" = ({"DeviceUsagePage"=1,"DeviceUsage"=2},{"DeviceUsagePage"=1,"DeviceUsage"=1},{"DeviceUsagePage"=13,"DeviceUsage"=1})
+  |   |   "IOPowerManagement" = {"ChildrenPowerState"=3,"CurrentPowerState"=3,"CapabilityFlags"=2,"MaxPowerState"=3}
+  |   |   "IOUserServerName" = "com.apple.driverkit.AppleUserHIDDrivers"
+  |   |   "ReportInterval" = 4000
+  |   |   "InputReportElements" = ({"ReportID"=1,"ElementCookie"=51,"Size"=40,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=40,"Usage"=0},{"ReportID"=2,"ElementCookie"=52,"Size"=80,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=80,"Usage"=0},{"ReportID"=3,"ElementCookie"=53,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0},{"ReportID"=4,"ElementCookie"=54,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0},{"ReportID"=5,"ElementCookie"=55,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0},{"ReportID"=6,"ElementCookie"=56,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0},{"ReportID"=7,"ElementCookie"=57,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0},{"ReportID"=8,"ElementCookie"=58,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0},{"ReportID"=9,"ElementCookie"=59,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0},{"ReportID"=10,"ElementCookie"=60,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0},{"ReportID"=11,"ElementCookie"=61,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0},{"ReportID"=12,"ElementCookie"=62,"Size"=80,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=80,"Usage"=0},{"ReportID"=13,"ElementCookie"=63,"Size"=8,"ReportCount"=1,"Type"=1,"VariableSize"=0,"UsagePage"=0,"ReportSize"=8,"Usage"=0})
+  |   |   "IOMatchedPersonality" = {"IOClass"="AppleUserHIDDevice","CFBundleIdentifier"="com.apple.AppleUserHIDDrivers","IOProviderClass"="IOUSBHostInterface","IOUserServerCDHash"="c1f9f34e045f400acaeb6a4fce11f184ac894e22","IOProbeScore"=1,"bInterfaceSubClass"=1,"IOUserServerName"="com.apple.driverkit.AppleUserHIDDrivers","HIDDefaultBehavior"="","kOSBundleDextUniqueIdentifier"=<b796d15d9354eae826f370c78da5a69a0107352f2c064353231d0efec890df26>,"CFBundleIdentifierKernel"="com.apple.iokit.IOHIDFamily","IOUserServerOneProcess"=Yes,"bInterfaceClass"=3,"IOUserClass"="AppleUserUSBHostHIDDevice"}
+  |   |   "CFBundleIdentifier" = "com.apple.AppleUserHIDDrivers"
+  |   |   "MaxOutputReportSize" = 1
+  |   |   "IOCFPlugInTypes" = {"FA12FA38-6F1A-11D4-BA0C-0005028F18D5"="IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin","40A57A4E-26A0-11D8-9295-000A958A2C78"="IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin","7DDEECA8-A7B4-11DA-8A0E-0014519758EF"="IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin"}
+  |   |   "IOProviderClass" = "IOUSBHostInterface"
+  |   |   "IOUserClass" = "AppleUserUSBHostHIDDevice"
+  |   |   "LocationID" = 1336320
+  |   |   "IOReportLegendPublic" = Yes
+  |   |   "CFBundleIdentifierKernel" = "com.apple.iokit.IOHIDFamily"
+  |   |   "IOClass" = "AppleUserHIDDevice"
+  |   |   "PrimaryUsage" = 2
+  |   |   "HIDDefaultBehavior" = ""
+  |   |   "CountryCode" = 0
+  |   |   "RequestTimeout" = 5000000
+  |   |   "bInterfaceSubClass" = 1
+  |   |   "IOMatchCategory" = "IODefaultMatchCategory"
+  |   |   "IOProbeScore" = 50001
+  |   |   "IOReportLegend" = ({"IOReportGroupName"="IOHIDDevice Input Report Errors","IOReportChannels"=((1,4295098369,"Report 1"),(2,4295098369,"Report 2"),(3,4295098369,"Report 3"),(4,4295098369,"Report 4"),(5,4295098369,"Report 5"),(6,4295098369,"Report 6"),(7,4295098369,"Report 7"),(8,4295098369,"Report 8"),(9,4295098369,"Report 9"),(10,4295098369,"Report 10"),(11,4295098369,"Report 11"),(12,4295098369,"Report 12"),(13,4295098369,"Report 13")),"IOReportChannelInfo"={"IOReportChannelUnit"=0},"IOReportSubGroupName"="Input Report IDs"})
+  |   |   "bInterfaceClass" = 3
+  |   |   "HIDDKStart" = Yes
+  |   | }
+  |   | 
+  |   +-o IOHIDInterface  <class IOHIDInterface, id 0x10001be6d, registered, matched, active, busy 0 (11 ms), retain 10>
+  |     | {
+  |     |   "Transport" = "USB"
+  |     |   "BootProtocol" = 2
+  |     |   "HIDDefaultBehavior" = ""
+  |     |   "Manufacturer" = "Tablet"
+  |     |   "Product" = "PTZ-630"
+  |     |   "MaxInputReportSize" = 10
+  |     |   "DeviceUsagePairs" = ({"DeviceUsagePage"=1,"DeviceUsage"=2},{"DeviceUsagePage"=1,"DeviceUsage"=1},{"DeviceUsagePage"=13,"DeviceUsage"=1})
+  |     |   "DebugState" = {"ReleasedBuffers"=0,"ReportAvailableCalls"=47508,"ReportAvailableRuns"=47508,"CreatedBuffers"=0}
+  |     |   "MaxOutputReportSize" = 1
+  |     |   "ReportDescriptor" = <05010902a10185010901a100050919012903150025019503750181029505810305010930093109381581257f750895038106c0c0050d0901a1018502090075089509150026ff008102093a25029501b1028503090026ff00b1028504093a2501b1028505090026ff009508b10285060900b102850709009504b10285080900b102850909009501b102850a09009502b102850b09009501b102850c090095098102850d09009501b102c0>
+  |     |   "CountryCode" = 0
+  |     |   "VendorID" = 1386
+  |     |   "VersionNumber" = 258
+  |     |   "IOServiceDEXTEntitlements" = ("com.apple.developer.driverkit.transport.hid")
+  |     |   "IODEXTMatchCount" = 1
+  |     |   "PrimaryUsage" = 2
+  |     |   "LocationID" = 1336320
+  |     |   "ProductID" = 177
+  |     |   "ReportInterval" = 4000
+  |     |   "PrimaryUsagePage" = 1
+  |     |   "DeviceOpenedByEventSystem" = Yes
+  |     |   "MaxFeatureReportSize" = 9
+  |     | }
+  |     | 
+  |     +-o AppleUserHIDEventDriver  <class AppleUserHIDEventService, id 0x10001be6e, registered, matched, active, busy 0 (1 ms), retain 16>
+  |       | {
+  |       |   "kOSBundleDextUniqueIdentifier" = <b796d15d9354eae826f370c78da5a69a0107352f2c064353231d0efec890df26>
+  |       |   "PrimaryUsagePage" = 1
+  |       |   "SensorProperties" = {}
+  |       |   "IOUserClientClass" = "IOHIDEventServiceUserClient"
+  |       |   "VersionNumber" = 258
+  |       |   "VendorID" = 1386
+  |       |   "HIDPointerResolution" = 26214400
+  |       |   "IOUserServerOneProcess" = Yes
+  |       |   "SupportedHIDEventMask" = 131136
+  |       |   "BootProtocol" = 2
+  |       |   "RelativePointer" = {"Elements"=({"VariableSize"=0,"UnitExponent"=0,"IsRelative"=Yes,"UsagePage"=1,"Max"=127,"IsArray"=No,"Type"=1,"Size"=8,"Min"=18446744073709551489,"Flags"=134217734,"ReportID"=1,"Usage"=48,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=18446744073709551489,"IsWrapping"=No,"ScaledMax"=127,"ElementCookie"=35},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=Yes,"UsagePage"=1,"Max"=127,"IsArray"=No,"Type"=1,"Size"=8,"Min"=18446744073709551489,"Flags"=134217734,"ReportID"=1,"Usage"=49,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=18446744073709551489,"IsWrapping"=No,"ScaledMax"=127,"ElementCookie"=36},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=9,"Max"=1,"IsArray"=No,"Type"=2,"Size"=1,"Min"=0,"Flags"=134217730,"ReportID"=1,"Usage"=1,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=32},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=9,"Max"=1,"IsArray"=No,"Type"=2,"Size"=1,"Min"=0,"Flags"=134217730,"ReportID"=1,"Usage"=2,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=33},{"VariableSize"=0,"UnitExponent"=0,"IsRelative"=No,"UsagePage"=9,"Max"=1,"IsArray"=No,"Type"=2,"Size"=1,"Min"=0,"Flags"=134217730,"ReportID"=1,"Usage"=3,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=1,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=0,"IsWrapping"=No,"ScaledMax"=1,"ElementCookie"=34})}
+  |       |   "Scroll" = {"Elements"=({"VariableSize"=0,"UnitExponent"=0,"IsRelative"=Yes,"UsagePage"=1,"Max"=127,"IsArray"=No,"Type"=1,"Size"=8,"Min"=18446744073709551489,"Flags"=134217734,"ReportID"=1,"Usage"=56,"ReportCount"=1,"Unit"=0,"HasNullState"=No,"ReportSize"=8,"HasPreferredState"=Yes,"IsNonLinear"=No,"ScaledMin"=18446744073709551489,"IsWrapping"=No,"ScaledMax"=127,"ElementCookie"=37})}
+  |       |   "Product" = "PTZ-630"
+  |       |   "Transport" = "USB"
+  |       |   "HIDRMDeviceState" = "Unknown"
+  |       |   "HIDPointerAccelerationType" = "HIDMouseAcceleration"
+  |       |   "IOServiceDEXTEntitlements" = "com.apple.developer.driverkit.family.hid.eventservice"
+  |       |   "IOUserClasses" = ("AppleUserHIDEventDriver","AppleUserHIDEventService","IOUserHIDEventDriver","IOUserHIDEventService","IOHIDEventService","IOService","OSObject")
+  |       |   "Manufacturer" = "Tablet"
+  |       |   "IOUserServerCDHash" = "c1f9f34e045f400acaeb6a4fce11f184ac894e22"
+  |       |   "ProductID" = 177
+  |       |   "DeviceUsagePairs" = ({"DeviceUsagePage"=1,"DeviceUsage"=2},{"DeviceUsagePage"=1,"DeviceUsage"=1},{"DeviceUsagePage"=13,"DeviceUsage"=1})
+  |       |   "RegisterService" = No
+  |       |   "HIDScrollResolution" = 589824
+  |       |   "HIDScrollAccelerationType" = "HIDMouseScrollAcceleration"
+  |       |   "IOUserServerName" = "com.apple.driverkit.AppleUserHIDDrivers"
+  |       |   "IOPowerManagement" = {"CapabilityFlags"=2,"MaxPowerState"=3,"CurrentPowerState"=3}
+  |       |   "ReportInterval" = 4000
+  |       |   "HIDPointerButtonCount" = 3
+  |       |   "VendorIDSource" = 0
+  |       |   "IOMatchedPersonality" = {"IOProbeScore"=1,"CFBundleIdentifier"="com.apple.AppleUserHIDDrivers","IOUserServerOneProcess"=Yes,"kOSBundleDextUniqueIdentifier"=<b796d15d9354eae826f370c78da5a69a0107352f2c064353231d0efec890df26>,"IOProviderClass"="IOHIDInterface","CFBundleIdentifierKernel"="com.apple.iokit.IOHIDFamily","IOUserClass"="AppleUserHIDEventDriver","IOUserServerCDHash"="c1f9f34e045f400acaeb6a4fce11f184ac894e22","DeviceUsagePairs"=({"DeviceUsagePage"=1,"DeviceUsage"=1},{"DeviceUsagePage"=1,"DeviceUsage"=2},{"DeviceUsagePage"=1,"DeviceUsage"=5},{"DeviceUsagePage"=1,"DeviceUsage"=4},{"DeviceUsagePage"=11,"DeviceUsage"=1},{"DeviceUsagePage"=65292,"DeviceUsage"=3},{"DeviceUsagePage"=11},{"DeviceUsagePage"=12},{"DeviceUsagePage"=13},{"DeviceUsagePage"=16},{"DeviceUsagePage"=144}),"IOClass"="AppleUserHIDEventService","IOUserServerName"="com.apple.driverkit.AppleUserHIDDrivers"}
+  |       |   "HIDEventServiceProperties" = {"HIDMouseKeysOptionToggles"=0,"JitterNoClick"=1,"ActuateDetents"=1,"Dragging"=Yes,"HIDSlowKeysDelay"=0,"FlipLeftAndRightEdgeGestures"=No,"JitterNoMove"=1,"HIDTrackpadScrollAcceleration"=20480,"HIDInitialKeyRepeat"=500000000,"TrackpadThreeFingerHorizSwipeGesture"=2,"TrackpadThreeFingerDrag"=No,"MTGestureConfiguration"={"Version"=1,"Behaviors"=()},"MTGestureConfigurationOverride"={"Version"=1,"Behaviors"=({"BehaviorID"=1})},"HIDPointerAcceleration"=45056,"UserPreferences"=Yes,"HIDDefaultParameters"=Yes,"HIDMouseKeysOn"=0,"HIDF12EjectDelay"=250,"TrackpadHorizScroll"=1,"TrackpadThreeFingerSwipe"=1,"TrackpadFourFingerVertSwipeGesture"=1,"TrackpadTwoFingerFromRightEdgeSwipeGesture"=3,"USBMouseStopsTrackpad"=0,"PreserveTimestamp"=Yes,"HIDMouseScrollAcceleration"=57344,"TrackpadThreeFingerTapGesture"=0,"MouseOneFingerDoubleTapGesture"=0,"HIDScrollZoomModifierMask"=262144,"TrackpadScroll"=1,"Trackpad Jitter Milliseconds"=192,"HIDUseLinearScalingMouseAcceleration"=0,"HIDPointerButtonMode"=2,"HIDKeyboardModifierMappingPairs"=(),"LogLevel"=6,"TrackpadFourFingerHorizSwipeGesture"=2,"HIDTrackpadAcceleration"=65536,"DragLock"=No,"DeviceOpenedByEventSystem"=Yes,"TwofingerNoAction"=1,"MouseTwoFingerDoubleTapGesture"=3,"HIDClickTime"=500000000,"HIDMouseAcceleration"=98304,"SecondClickThreshold"=1,"HIDStickyKeysShiftToggles"=0,"TrackpadHandResting"=Yes,"TrackpadFourFingerPinchGesture"=2,"MouseMomentumScroll"=Yes,"TrackpadFiveFingerPinchGesture"=2,"PalmNoAction Permanent"=1,"MouseButtonMode"="TwoButton","TrackpadThreeFingerVertSwipeGesture"=2,"OutsidezoneNoAction When Typing"=1,"ForceSuppressed"=No,"TrackpadCornerSecondaryClick"=0,"MouseButtonDivision"=55,"HIDStickyKeysOn"=0,"HIDStickyKeysDisabled"=0,"EjectDelay"=0,"FirstClickThreshold"=1,"TrackpadPinch"=1,"HIDClickSpace"=(0,0),"PalmNoAction When Typing"=1,"MouseVerticalScroll"=Yes,"version"=1,"LastActivityTimestamp"=5846196846054,"MouseHorizontalScroll"=Yes,"BatchInterval"=1,"TrackpadMomentumScroll"=Yes,"MouseKeysStopsTrackpad"=0,"migrationDone"=Yes,"MouseTwoFingerHorizSwipeGesture"=2,"HIDKeyRepeat"=83333333,"HIDScrollReset"=Yes,"TrackpadTwoFingerDoubleTapGesture"=1,"Clicking"=Yes,"TrackpadThreeFingersRightClick"=No,"TrackpadRotate"=1,"Use Panther Settings for W"=0,"TrackpadRightClick"=1,"HIDScrollAcceleration"=20480,"HIDFKeyMode"=1}
+  |       |   "CFBundleIdentifier" = "com.apple.AppleUserHIDDrivers"
+  |       |   "IOCFPlugInTypes" = {"7DDEECA8-A7B4-11DA-8A0E-0014519758EF"="IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin","FA12FA38-6F1A-11D4-BA0C-0005028F18D5"="IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin"}
+  |       |   "IOProviderClass" = "IOHIDInterface"
+  |       |   "IOUserClass" = "AppleUserHIDEventDriver"
+  |       |   "LocationID" = 1336320
+  |       |   "CFBundleIdentifierKernel" = "com.apple.iokit.IOHIDFamily"
+  |       |   "IOClass" = "AppleUserHIDEventService"
+  |       |   "PrimaryUsage" = 2
+  |       |   "CountryCode" = 0
+  |       |   "HIDServiceSupport" = Yes
+  |       |   "SensorPropertySupported" = 0
+  |       |   "IOMatchCategory" = "IODefaultMatchCategory"
+  |       |   "IOGeneralInterest" = "IOCommand is not serializable"
+  |       |   "IOProbeScore" = 1201
+  |       |   "HIDDKStart" = Yes
+  |       | }
+  |       | 
+  |       +-o IOHIDEventServiceUserClient  <class IOHIDEventServiceUserClient, id 0x10001be73, !registered, !matched, active, busy 0, retain 6>
+  |           {
+  |             "IOUserClientDefaultLockingSetProperties" = Yes
+  |             "IOUserClientDefaultLocking" = Yes
+  |             "IOUserClientCreator" = "pid 612, WindowServer"
+  |             "IOUserClientDefaultLockingSingleThreadExternalMethod" = No
+  |             "IOUserClientEntitlements" = No
+  |             "DebugState" = {"EventQueue"={"NoFullMsg"=0,"tail"=3300,"NotificationForce"=0,"NotificationCount"=47486,"head"=3300},"EnqueueEventCount"=47486,"LastEventType"=17,"LastEventTime"=997624459041}
+  |           }
+  |           
+  +-o steam_osx  <class AppleUSBHostDeviceUserClient, id 0x10001be61, !registered, !matched, active, busy 0, retain 6>
+  |   {
+  |     "IOUserClientCreator" = "pid 9421, steam_osx"
+  |     "IOUserClientDefaultLocking" = Yes
+  |   }
+  |   
+  +-o Google Chrome  <class AppleUSBHostDeviceUserClient, id 0x10001be62, !registered, !matched, active, busy 0, retain 7>
+      {
+        "IOUserClientCreator" = "pid 6210, Google Chrome"
+        "IOUserClientDefaultLocking" = Yes
+      }
+      
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+ Please look at the URL
+ https://developer.apple.com/library/mac/documentation/DeveloperTools/Reference/DistributionDefinitionRef/Chapters/Introduction.html#//apple_ref/doc/uid/TP40005370-CH1-SW1
+ to see documentation on how to use this file.
+ Also take a peek at
+ http://www.shanekirk.com/2013/10/creating-flat-packages-in-osx/
+ -->
+<installer-gui-script minSpecVersion="2">
+    <title>Wacom Tablet</title>
+    <background file="Background.png" mime-type="image/png"/>
+    <icon type="local" width="128" height="128">installerImage.png</icon>
+    <pkg-ref id="com.wacom.TabletInstaller">
+        <bundle-version>
+            <bundle CFBundleShortVersionString="Wacom v6.3.15-3" CFBundleVersion="6.3.15f3" id="com.wacom.settingsPrefPane" path="Library/PreferencePanes/WacomTablet.prefpane"/>
+            <bundle CFBundleShortVersionString="Wacom Desktop Center 6.3.15-3" CFBundleVersion="6.3.15f3" id="com.wacom.Wacom-Desktop-Center" path="Applications/Wacom Tablet.localized/Wacom Desktop Center.app"/>
+            <bundle CFBundleShortVersionString="WacomTabletPlugin 2.1.0.6" CFBundleVersion="2.1.0.6" id="com.WacomTabletPluginLib.WacomTabletPlugin" path="Library/Internet Plug-Ins/WacomTabletPlugin.plugin"/>
+            <bundle CFBundleShortVersionString="1.0" CFBundleVersion="1" id="com.wacom.WacomMultiTouch" path="Library/Frameworks/WacomMultiTouch.framework"/>
+            <bundle CFBundleShortVersionString="Wacom Tablet 6.3.15-3" CFBundleVersion="6.3.15f3" id="com.wacom.wacomtablet" path="Library/Application Support/Tablet/WacomTabletDriver.app"/>
+            <bundle CFBundleVersion="3.0.0d1" id="com.silabs.driver.CP210xVCPDriver64" path="Library/Extensions/SiLabsUSBDriver64.kext"/>
+            <bundle CFBundleShortVersionString="1.0" CFBundleVersion="1" id="com.FTDI.driver.D2XXHelper" path="Library/Extensions/FTDIKext.kext"/>
+            <bundle CFBundleShortVersionString="Wacom Tablet 6.3.15-3" CFBundleVersion="6.3.15" id="com.wacom.kext.wacomtablet" path="Library/Extensions/Wacom Tablet.kext"/>
+            <bundle CFBundleShortVersionString="v6.3.15-3" CFBundleVersion="6.3.15f3" id="com.wacom.RemoveWacomTablet" path="Applications/Wacom Tablet.localized/Wacom Tablet Utility.app"/>
+            <bundle CFBundleShortVersionString="6.3.15-3" CFBundleVersion="6.3.15f3" id="com.wacom.Wacom-Display-Settings" path="Applications/Wacom Tablet.localized/Wacom Display Settings.app"/>
+        </bundle-version>
+    </pkg-ref>
+    <options customize="never" require-scripts="false" hostArchitecture="x86_64" rootVolumeOnly="true"/>
+    <volume-check>
+        <allowed-os-versions>
+            <os-version min="10.8.0"/>
+        </allowed-os-versions>
+    </volume-check>
+    <license file="License.rtf" mime-type="text/richtext"/>
+    <welcome file="Welcome.rtf" mime-type="text/richtext"/>
+    <choices-outline>
+        <line choice="default">
+		<line choice="com.wacom.TabletInstaller"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.wacom.TabletInstaller" visible="false">
+        <pkg-ref id="com.wacom.TabletInstaller"/>
+    </choice>
+    <pkg-ref id="com.wacom.TabletInstaller" version="0" onConclusion="RequireRestart" installKBytes="208188">#content.pkg</pkg-ref>
+	<domains enable_anywhere="false" enable_currentUserHome="false" enable_localSystem="true" />
+</installer-gui-script>
