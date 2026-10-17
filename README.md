@@ -93,7 +93,8 @@ intuos3d/
     main.swift                   IOHIDManager setup, mode switch, permissions, run loop
   LaunchAgent/local.intuos3d.plist
   install.sh / uninstall.sh
-notes/                           raw evidence from the triage
+tools/eventmon.swift             global NSEvent monitor: shows what AppKit makes of the posted events
+notes/                           raw evidence from the triage and the verification session
 ```
 
 ### Protocol, as implemented
@@ -191,9 +192,19 @@ Verified with the real tablet on 2026-10-17 (log excerpts: `notes/first-session.
 * Strips: a one-hot 13-bit mask, **segment 1 at the top, 13 at the bottom**, moving one segment per report during
   a swipe. A resting hand produced a 4↔1 flicker on the right strip; jumps of more than two segments are ignored.
 
-Not yet verified: the upper pen side button (`d[1] & 4`, never pressed in range during the test), airbrush/marker
-packets, eraser recognition and tilt direction in Krita. For Krita: Settings → Configure Krita → Tablet Settings →
-"Open Tablet Tester" shows the live pressure, tilt and device type (stylus/eraser) Krita receives.
+* Krita 5.3 Tablet Tester: strokes arrive as `Stylus press/move/release` with pressure, tilt in degrees and
+  `(DRAW)`; the two side buttons arrive as `B=2` (right) and `B=4` (middle) presses, so the upper rocker
+  (`d[1] & 4`) works too; proximity prints `Pen tip brought near` / `Eraser taken away`, i.e. Krita sees the
+  pointer type. ("Stylus" in the tester is the device class, not the pointer type.)
+* AppKit level (`tools/eventmon.swift`, log in `notes/appkit-eventmon.log`): proximity events decode as
+  `pointingDeviceType` 1 for the pen (vendor tool 0x823) and 3 for the eraser end (0x82b), in both event forms;
+  point events carry pressure and tilt with the matching `deviceID`.
+
+Krita only uses an eraser brush for the eraser end after you pick one while the eraser end is active; it then
+remembers the preset per pointer type. Tayasui Sketches did not treat the eraser end specially even though the
+events are correct; that is an app limitation.
+
+Not yet verified: airbrush/marker packets and the 2D mouse (no such tools at hand).
 
 To log raw reports: set `"logReports": true` in the config and `launchctl kickstart -k gui/$UID/local.intuos3d`;
 every HID report and parsed event goes to `~/Library/Logs/intuos3d.log`.
@@ -204,4 +215,5 @@ every HID report and parsed event goes to `~/Library/Logs/intuos3d.log`.
 * Whether "scroll:-1" on a downward strip swipe scrolls the way you expect depends on your scrolling
   preference; swap the two strip entries if not.
 * Airbrush wheel, marker rotation and the 4D mouse are parsed as plain pen/mouse packets or ignored.
+* `expressKeys[i]` is HID bit i; on this unit the left block's bits are not in top-to-bottom order.
 * The tablet stays in Intuos mode after the driver exits (macOS then sees no cursor movement from it) until replug.
