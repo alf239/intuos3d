@@ -13,7 +13,7 @@ Neither Phase 0 shortcut worked as shipped; details and one correction below.
 
 | Route | Result | Why |
 |---|---|---|
-| (a) OpenTabletDriver 0.6.7 | ✗ (as shipped) | Has a `PTZ-630.json` config and its 0.6.x macOS backend does post pressure/tilt/eraser/proximity events, but it ships macOS as **x86_64 only** (Rosetta; CI already builds `osx-arm64`, see upstream issue 2955) and it never requests Input Monitoring, so the daemon silently reports *"No tablets were detected"*. Not re-tested with the permission granted by hand. |
+| (a) OpenTabletDriver 0.6.7 | ✗ as tested here, but see correction | Has a `PTZ-630.json` config and its 0.6.x macOS backend does post pressure/tilt/eraser/proximity events. The 0.6.7 release is x86_64 only (Rosetta); **0.6.8-rc1 (2026-10-14) ships a native `osx-arm64` build.** The *"No tablets were detected"* result below came from running the daemon directly, which bypasses the UX's permission request. Not yet tested the intended way. |
 | (b) thenickdude/wacom-driver-fix 6.3.15-3 | ✗ (not installable unattended) | x86_64-only package that installs a kext, a LaunchAgent, a prefpane and a 2021-era Wacom daemon, requires an admin password and a **restart**, and was built for Catalina–Monterey. The daemon cannot be exercised without the full install (hardened runtime, hard-coded framework path). |
 | Phase 1 `intuos3d` | ✓ built, installed, running; waits on two permission grants | Native arm64, IOHIDManager + CGEvent, launch agent, parser verified against the Linux reference with an offline self-test. |
 
@@ -40,22 +40,26 @@ Neither Phase 0 shortcut worked as shipped; details and one correction below.
   (copy in `notes/opentabletdriver-PTZ-630.json`): 40640×30480, 2046 max pressure (OTD reads the 11-bit raw value,
   Linux halves it to 1023), 8 aux buttons, parser `Intuos3ReportParser`.
 * Release assets for v0.6.7 (April 2026): only `OpenTabletDriver-0.6.7_osx-x64.tar.gz`. Both executables in the
-  bundle are `Mach-O x86_64`. The wiki page is literally titled "macOS (Intel) Installation Guide". So **no native
-  arm64 backend**; it runs under Rosetta.
-* Installed to `/Applications/OpenTabletDriver.app` and ran the daemon under launchd. Log
+  bundle are `Mach-O x86_64`; it runs under Rosetta. **v0.6.8-rc1 (2026-10-14, pre-release) adds
+  `OpenTabletDriver-0.6.8-rc1_osx-arm64.tar.gz`, a native arm64 build (ad-hoc signed).**
+* Installed to `/Applications/OpenTabletDriver.app` and ran the **daemon directly** under launchd. Log
   (`notes/opentabletdriver-0.6.7-daemon.log`): it enumerated its whole config library and ended with
-  `No tablets were detected.` It never prompted for Input Monitoring, so without that TCC grant HidSharp cannot
-  open or match the device.
+  `No tablets were detected.` because the process had no Input Monitoring grant. **Correction (from the
+  maintainers, issue 2955):** the daemon is not meant to be started that way. `OpenTabletDriver.UX.MacOS/Program.cs`
+  runs `PermissionHelper.HasPermissions()` first, which calls `IOHIDRequestAccess` and `AXIsProcessTrusted`, shows
+  an alert per missing permission and relaunches the app; the daemon inherits the grants from there. The wiki's
+  Required Permissions page also lists both permissions for macOS. The UX instance I launched with `open` was
+  almost certainly waiting on that alert when I killed it. So the honest summary is "not tested the intended way",
+  not "fails silently".
 * Correction to an earlier draft of this README: `master` (the unreleased 0.7 rewrite) has a macOS pointer that only
   posts plain mouse events, but the **0.6.x branch that the 0.6.7 release is built from does implement tablet
   events** (`MacOSVirtualMouse.cs`: `IPressureHandler`, `ITiltHandler`, `IEraserHandler`, proximity events with the
   Wacom capability mask, tablet-subtype mouse events). So with Input Monitoring + Accessibility granted to
   `OpenTabletDriver.app`, OTD would most likely deliver pressure on this tablet under Rosetta. The reasons it was not
   pursued: no native arm64 release, no permission prompt (HidSharp never calls `IOHIDRequestAccess`, so the failure
-  is silent), and both drivers cannot run at once. Nothing to upstream as a *config* change; `PTZ-630.json` is
-  correct. Useful upstream contributions would be: an `osx-arm64` release asset (CI already builds it; issue 2955),
-  a call to `IOHIDRequestAccess` / a clear log line when `IOHIDManagerOpen` returns `kIOReturnNotPermitted`, and a
-  note in the macOS install guide that Input Monitoring must be granted.
+  is silent only when the daemon is run on its own), and both drivers cannot run at once. Nothing to upstream:
+  `PTZ-630.json` is correct, the permission flow and docs exist, and 0.6.8-rc1 already ships `osx-arm64`. The one
+  small thing left would be a log line in the daemon when `IOHIDManagerOpen` returns `kIOReturnNotPermitted`.
 * The app is left installed but not running. Remove with `rm -rf /Applications/OpenTabletDriver.app
   ~/Library/Application\ Support/OpenTabletDriver`.
 
