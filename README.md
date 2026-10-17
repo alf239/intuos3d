@@ -160,8 +160,18 @@ identifier, writes `~/Library/LaunchAgents/local.intuos3d.plist` and bootstraps 
    The driver polls `IOHIDCheckAccess` and restarts itself once this is granted.
 2. **Accessibility**: required for `CGEventPost` to the HID event tap. Takes effect immediately.
 
-Because the binary is ad-hoc signed, TCC identifies it by code hash; after a rebuild you may need to re-tick it
-in both lists. `./uninstall.sh` removes everything; unplug/replug the tablet to return it to boot-mouse mode.
+`./uninstall.sh` removes everything; unplug/replug the tablet to return it to boot-mouse mode.
+
+### Signing (why the first grants did not stick)
+
+TCC identifies an ad-hoc signed binary by its code hash, so the grants made against the first build stopped
+matching after the next `./install.sh`. The installer therefore signs with a self-signed code-signing certificate
+named `intuos3d local code signing` when it finds one in the login keychain; the designated requirement becomes
+`identifier "local.intuos3d" and certificate leaf = H"..."`, which is stable across rebuilds. The certificate was
+created with `openssl req -x509` (`extendedKeyUsage = codeSigning`) and imported with
+`security import ... -T /usr/bin/codesign`; it does not need to be trusted for this to work. Without it the
+installer falls back to ad-hoc signing and warns. Stale `intuos3d` rows in Privacy & Security must be removed
+(select, minus) before the re-signed binary can prompt again.
 
 ### Verification status
 
