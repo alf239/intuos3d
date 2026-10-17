@@ -13,7 +13,8 @@ NSEvent.addGlobalMonitorForEvents(matching: [.tabletProximity, .tabletPoint, .mo
                                              .otherMouseDown, .otherMouseUp]) { e in
     var line: String?
     if e.type == .tabletProximity || e.subtype == .tabletProximity {
-        line = "PROXIMITY type=\(e.type.rawValue) enter=\(e.isEnteringProximity) pointingDeviceType=\(e.pointingDeviceType.rawValue) (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x\(String(e.vendorPointingDeviceType, radix: 16)) deviceID=\(e.deviceID) uniqueID=\(e.uniqueID) tabletID=\(e.tabletID) capability=0x\(String(e.capabilityMask, radix: 16))"
+        let loc = e.locationInWindow
+        line = "PROXIMITY type=\(e.type.rawValue) loc=(\(Int(loc.x)),\(Int(loc.y))) enter=\(e.isEnteringProximity) pointingDeviceType=\(e.pointingDeviceType.rawValue) (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x\(String(e.vendorPointingDeviceType, radix: 16)) deviceID=\(e.deviceID) uniqueID=\(e.uniqueID) tabletID=\(e.tabletID) capability=0x\(String(e.capabilityMask, radix: 16))"
     } else if e.subtype == .tabletPoint {
         let isMove = e.type == .mouseMoved || e.type == .leftMouseDragged
         moves += isMove ? 1 : 0

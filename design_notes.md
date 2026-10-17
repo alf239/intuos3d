@@ -63,6 +63,24 @@ Neither Phase 0 shortcut worked as shipped; details and one correction below.
 * The app is left installed but not running. Remove with `rm -rf /Applications/OpenTabletDriver.app
   ~/Library/Application\ Support/OpenTabletDriver`.
 
+### 0.6.8-rc1 native arm64, tested 2026-10-17
+
+After the maintainers pointed at it (issue 2955), the `OpenTabletDriver-0.6.8-rc1_osx-arm64.tar.gz` build was
+installed and launched the intended way, with intuos3d stopped:
+
+* Native `arm64` daemon and UX, ad-hoc signed. The UX requested Input Monitoring and Accessibility itself.
+* The PTZ-630 was detected and configured (profile "Wacom PTZ-630", Absolute Mode, default bindings).
+* AppKit level (`notes/appkit-eventmon-otd-0.6.8-rc1.log`): point events carry the TabletPoint subtype, pressure
+  up to 0.97 and tilt; proximity events are posted for pen (`vendorPointerType 0x802`) and eraser; `deviceID`
+  matches between them. Pressure-sensitive strokes worked in Tayasui Sketches.
+* **Krita 5.3 did not get tablet events**: its Tablet Tester printed only `Mouse press/move` lines with no
+  pressure and no `Pen tip brought near`, i.e. Qt never received the proximity event and fell back to mouse
+  handling (Qt drops tablet points whose `deviceID` it has not seen in a proximity event). The likely cause is in
+  `MacOSVirtualMouse.PostProximityEvent`: the event is created with `CGEventCreate` and posted without a location,
+  so WindowServer delivers it to whatever window is at screen (0,0) instead of the window under the pen.
+  intuos3d sets the event location to the pen position and Krita receives its proximity events. OTD also never
+  posts a proximity *leave*. Not yet confirmed by capturing the event location; a small upstream fix.
+
 ## Phase 0(b): wacom-driver-fix 6.3.15-3 (Rosetta)
 
 Downloaded `Install-Wacom-Tablet-6.3.15-3-patched.pkg` (94 MB, Developer ID "Nicholas Sherlock", notarized 2021-09),

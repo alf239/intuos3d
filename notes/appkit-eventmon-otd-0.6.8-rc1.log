@@ -1,0 +1,150 @@
+2026-10-17T22:04:33Z eventmon running
+2026-10-17T22:04:33Z POINT type=2 pressure=0.000 tilt=(0.32,-0.22) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:33Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:33Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:33Z POINT type=5 pressure=0.000 tilt=(0.70,-0.41) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:35Z PROXIMITY type=24 enter=true pointingDeviceType=3 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:35Z POINT type=5 pressure=0.000 tilt=(0.47,-0.38) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:35Z POINT type=5 pressure=0.000 tilt=(0.38,-0.22) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:35Z POINT type=1 pressure=0.035 tilt=(0.36,-0.24) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:36Z POINT type=6 pressure=0.604 tilt=(0.40,-0.29) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:36Z POINT type=6 pressure=0.643 tilt=(0.39,-0.28) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:37Z POINT type=2 pressure=0.000 tilt=(0.36,-0.29) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:37Z PROXIMITY type=24 enter=true pointingDeviceType=3 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:37Z PROXIMITY type=5 enter=true pointingDeviceType=3 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:37Z POINT type=5 pressure=0.000 tilt=(0.38,-0.42) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:37Z POINT type=1 pressure=0.282 tilt=(0.37,-0.28) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:37Z POINT type=2 pressure=0.000 tilt=(0.36,-0.26) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:37Z POINT type=5 pressure=0.000 tilt=(0.36,-0.26) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:37Z POINT type=5 pressure=0.000 tilt=(0.29,-0.26) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:38Z POINT type=5 pressure=0.000 tilt=(0.30,-0.23) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:38Z POINT type=1 pressure=0.106 tilt=(0.30,-0.24) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:38Z POINT type=2 pressure=0.000 tilt=(0.31,-0.24) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:38Z PROXIMITY type=24 enter=true pointingDeviceType=3 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:38Z POINT type=5 pressure=0.000 tilt=(0.30,-0.24) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:39Z POINT type=1 pressure=0.059 tilt=(0.30,-0.24) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:39Z POINT type=2 pressure=0.000 tilt=(0.30,-0.24) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:39Z POINT type=5 pressure=0.000 tilt=(0.30,-0.24) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:39Z PROXIMITY type=24 enter=true pointingDeviceType=3 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:39Z PROXIMITY type=5 enter=true pointingDeviceType=3 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:39Z POINT type=5 pressure=0.000 tilt=(0.39,-0.44) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:40Z POINT type=5 pressure=0.000 tilt=(0.48,-0.20) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:40Z POINT type=5 pressure=0.000 tilt=(0.52,-0.30) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:41Z POINT type=1 pressure=0.003 tilt=(0.31,-0.32) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:41Z POINT type=6 pressure=0.263 tilt=(0.30,-0.32) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:41Z POINT type=2 pressure=0.000 tilt=(0.30,-0.32) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:42Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:42Z POINT type=5 pressure=0.000 tilt=(0.37,-0.67) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:43Z POINT type=5 pressure=0.000 tilt=(0.38,-0.18) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:43Z POINT type=5 pressure=0.000 tilt=(0.39,-0.12) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:44Z POINT type=1 pressure=0.239 tilt=(0.31,-0.17) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:44Z POINT type=6 pressure=0.529 tilt=(0.29,-0.18) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:44Z POINT type=2 pressure=0.000 tilt=(0.29,-0.17) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:44Z POINT type=5 pressure=0.000 tilt=(0.42,-0.07) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:44Z POINT type=5 pressure=0.000 tilt=(0.30,-0.30) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:45Z POINT type=5 pressure=0.000 tilt=(0.34,-0.20) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:45Z POINT type=1 pressure=0.027 tilt=(0.33,-0.19) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:45Z POINT type=2 pressure=0.000 tilt=(0.33,-0.19) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:45Z POINT type=5 pressure=0.000 tilt=(0.33,-0.19) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:46Z POINT type=5 pressure=0.000 tilt=(0.26,-0.22) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:46Z POINT type=5 pressure=0.000 tilt=(0.36,-0.23) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:47Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:47Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:47Z POINT type=5 pressure=0.000 tilt=(0.34,-0.23) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:47Z POINT type=1 pressure=0.196 tilt=(0.31,-0.27) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:47Z POINT type=6 pressure=0.282 tilt=(0.32,-0.31) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:48Z POINT type=2 pressure=0.000 tilt=(0.33,-0.28) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:48Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:48Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:48Z POINT type=1 pressure=0.039 tilt=(0.33,-0.29) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:48Z POINT type=6 pressure=0.369 tilt=(0.33,-0.28) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:48Z POINT type=2 pressure=0.000 tilt=(0.32,-0.24) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:48Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:48Z POINT type=5 pressure=0.000 tilt=(0.39,-0.27) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:49Z POINT type=5 pressure=0.000 tilt=(0.33,-0.26) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:49Z POINT type=1 pressure=0.012 tilt=(0.33,-0.26) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:49Z POINT type=2 pressure=0.000 tilt=(0.36,-0.24) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:49Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:49Z POINT type=5 pressure=0.000 tilt=(0.33,-0.31) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:49Z POINT type=5 pressure=0.000 tilt=(0.48,-0.30) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:50Z POINT type=5 pressure=0.000 tilt=(0.36,-0.31) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:50Z POINT type=5 pressure=0.000 tilt=(0.36,-0.23) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:51Z POINT type=5 pressure=0.000 tilt=(0.36,-0.32) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:51Z POINT type=1 pressure=0.067 tilt=(0.34,-0.30) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:51Z POINT type=2 pressure=0.000 tilt=(0.34,-0.30) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:51Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:51Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:51Z POINT type=5 pressure=0.000 tilt=(0.32,-0.37) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:52Z POINT type=5 pressure=0.000 tilt=(0.30,-0.31) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:52Z POINT type=5 pressure=0.000 tilt=(0.43,-0.16) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:52Z POINT type=5 pressure=0.000 tilt=(0.24,-0.18) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:53Z POINT type=1 pressure=0.039 tilt=(0.27,-0.20) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:53Z POINT type=6 pressure=0.388 tilt=(0.28,-0.20) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:53Z POINT type=2 pressure=0.000 tilt=(0.28,-0.19) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:53Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:53Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:53Z POINT type=5 pressure=0.000 tilt=(0.23,-0.14) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:54Z POINT type=5 pressure=0.000 tilt=(0.32,-0.22) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:54Z POINT type=5 pressure=0.000 tilt=(0.36,-0.29) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:54Z POINT type=1 pressure=0.071 tilt=(0.36,-0.28) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:54Z POINT type=6 pressure=0.659 tilt=(0.33,-0.29) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:55Z POINT type=6 pressure=0.624 tilt=(0.32,-0.24) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:55Z POINT type=6 pressure=0.655 tilt=(0.36,-0.24) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:55Z POINT type=2 pressure=0.000 tilt=(0.37,-0.22) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:55Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:55Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:56Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:56Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:56Z POINT type=5 pressure=0.000 tilt=(0.37,-0.19) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:56Z POINT type=1 pressure=0.212 tilt=(0.38,-0.26) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:56Z POINT type=6 pressure=0.247 tilt=(0.37,-0.24) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:57Z POINT type=6 pressure=0.969 tilt=(0.33,-0.23) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:57Z POINT type=6 pressure=0.949 tilt=(0.37,-0.21) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:58Z POINT type=6 pressure=0.937 tilt=(0.41,-0.22) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:58Z POINT type=2 pressure=0.000 tilt=(0.41,-0.22) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:58Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:58Z POINT type=5 pressure=0.000 tilt=(0.41,-0.22) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:58Z POINT type=5 pressure=0.000 tilt=(0.68,-0.28) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:59Z POINT type=5 pressure=0.000 tilt=(0.38,-0.17) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:59Z POINT type=1 pressure=0.063 tilt=(0.37,-0.19) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:59Z POINT type=2 pressure=0.000 tilt=(0.36,-0.19) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:59Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:59Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:04:59Z POINT type=5 pressure=0.000 tilt=(0.39,-0.24) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:04:59Z POINT type=1 pressure=0.024 tilt=(0.36,-0.22) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:00Z POINT type=2 pressure=0.000 tilt=(0.37,-0.19) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:00Z POINT type=5 pressure=0.000 tilt=(0.37,-0.19) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:00Z POINT type=1 pressure=0.063 tilt=(0.37,-0.17) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:00Z POINT type=6 pressure=0.588 tilt=(0.34,-0.19) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:00Z POINT type=2 pressure=0.000 tilt=(0.32,-0.19) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:00Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:05:00Z POINT type=5 pressure=0.000 tilt=(0.50,-0.21) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:01Z POINT type=1 pressure=0.133 tilt=(0.36,-0.24) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:01Z POINT type=6 pressure=0.439 tilt=(0.38,-0.26) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:01Z POINT type=6 pressure=0.576 tilt=(0.37,-0.27) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:02Z POINT type=6 pressure=0.639 tilt=(0.32,-0.26) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:02Z POINT type=6 pressure=0.678 tilt=(0.32,-0.29) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:02Z POINT type=2 pressure=0.000 tilt=(0.32,-0.28) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:02Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:05:03Z POINT type=5 pressure=0.000 tilt=(0.39,-0.33) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:03Z POINT type=1 pressure=0.106 tilt=(0.31,-0.26) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:03Z POINT type=6 pressure=0.702 tilt=(0.28,-0.21) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:03Z POINT type=2 pressure=0.000 tilt=(0.30,-0.22) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:03Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:05:03Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:05:03Z POINT type=5 pressure=0.000 tilt=(0.38,-0.21) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:04Z POINT type=1 pressure=0.016 tilt=(0.37,-0.26) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:04Z POINT type=6 pressure=0.561 tilt=(0.36,-0.29) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:04Z POINT type=6 pressure=0.463 tilt=(0.40,-0.22) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:04Z POINT type=2 pressure=0.000 tilt=(0.40,-0.22) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:04Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:05:04Z PROXIMITY type=5 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:05:05Z POINT type=1 pressure=0.149 tilt=(0.39,-0.23) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:05Z POINT type=6 pressure=0.439 tilt=(0.41,-0.23) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:05Z POINT type=2 pressure=0.000 tilt=(0.31,-0.16) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:05Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
+2026-10-17T22:05:05Z POINT type=5 pressure=0.000 tilt=(0.31,-0.16) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:05Z POINT type=1 pressure=0.224 tilt=(0.34,-0.22) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:05Z POINT type=6 pressure=0.808 tilt=(0.32,-0.19) buttons=1 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:06Z POINT type=2 pressure=0.000 tilt=(0.31,-0.16) buttons=0 deviceID=29949 abs=(0,0,0)
+2026-10-17T22:05:06Z PROXIMITY type=24 enter=true pointingDeviceType=1 (1 pen, 2 cursor, 3 eraser) vendorPointerType=0x802 deviceID=29949 uniqueID=0 tabletID=0 capability=0x5c7
