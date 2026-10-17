@@ -1,9 +1,9 @@
 # intuos3d
 
 > **Status (October 2026): parked.** OpenTabletDriver 0.6.8-rc1 and later ship a native Apple Silicon build that
-> reads this tablet and delivers pressure, so for most people that is the better-supported choice; see
-> [design_notes.md](design_notes.md#phase-0a-opentabletdriver) for what was tested with it and the one Krita
-> issue found. intuos3d still works as described below and remains useful as a 500-line reference for the
+> reads this tablet and delivers pressure, tilt and the eraser (verified in Krita), so for most people that is
+> the better-supported choice; see [design_notes.md](design_notes.md#phase-0a-opentabletdriver) for the test.
+> intuos3d still works as described below and remains useful as a 500-line reference for the
 > Intuos 3 protocol and for posting tablet events from a user-space driver on macOS.
 
 A small, native macOS driver for the **Wacom Intuos 3** graphics tablet. It gives you pen pressure, tilt, the

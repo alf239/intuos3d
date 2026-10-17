@@ -13,7 +13,7 @@ Neither Phase 0 shortcut worked as shipped; details and one correction below.
 
 | Route | Result | Why |
 |---|---|---|
-| (a) OpenTabletDriver 0.6.7 | ✗ as tested here, but see correction | Has a `PTZ-630.json` config and its 0.6.x macOS backend does post pressure/tilt/eraser/proximity events. The 0.6.7 release is x86_64 only (Rosetta); **0.6.8-rc1 (2026-10-14) ships a native `osx-arm64` build.** The *"No tablets were detected"* result below came from running the daemon directly, which bypasses the UX's permission request. Not yet tested the intended way. |
+| (a) OpenTabletDriver 0.6.7 / **0.6.8-rc1 ✓** | 0.6.7 ✗ as tested, rc1 ✓ | Has a `PTZ-630.json` config and its 0.6.x macOS backend does post pressure/tilt/eraser/proximity events. The 0.6.7 release is x86_64 only (Rosetta); **0.6.8-rc1 (2026-10-14) ships a native `osx-arm64` build.** The *"No tablets were detected"* result below came from running the daemon directly, which bypasses the UX's permission request. Not yet tested the intended way. |
 | (b) thenickdude/wacom-driver-fix 6.3.15-3 | ✗ (not installable unattended) | x86_64-only package that installs a kext, a LaunchAgent, a prefpane and a 2021-era Wacom daemon, requires an admin password and a **restart**, and was built for Catalina–Monterey. The daemon cannot be exercised without the full install (hardened runtime, hard-coded framework path). |
 | Phase 1 `intuos3d` | ✓ built, installed, running; waits on two permission grants | Native arm64, IOHIDManager + CGEvent, launch agent, parser verified against the Linux reference with an offline self-test. |
 
@@ -73,13 +73,13 @@ installed and launched the intended way, with intuos3d stopped:
 * AppKit level (`notes/appkit-eventmon-otd-0.6.8-rc1.log`): point events carry the TabletPoint subtype, pressure
   up to 0.97 and tilt; proximity events are posted for pen (`vendorPointerType 0x802`) and eraser; `deviceID`
   matches between them. Pressure-sensitive strokes worked in Tayasui Sketches.
-* **Krita 5.3 did not get tablet events**: its Tablet Tester printed only `Mouse press/move` lines with no
-  pressure and no `Pen tip brought near`, i.e. Qt never received the proximity event and fell back to mouse
-  handling (Qt drops tablet points whose `deviceID` it has not seen in a proximity event). The likely cause is in
-  `MacOSVirtualMouse.PostProximityEvent`: the event is created with `CGEventCreate` and posted without a location,
-  so WindowServer delivers it to whatever window is at screen (0,0) instead of the window under the pen.
-  intuos3d sets the event location to the pen position and Krita receives its proximity events. OTD also never
-  posts a proximity *leave*. Not yet confirmed by capturing the event location; a small upstream fix.
+* **Krita 5.3**: a first Tablet Tester run showed only `Mouse press/move` lines with no pressure. That turned out
+  to be the tablet in boot-mouse mode while the daemon was restarting after the permission grants (macOS's own
+  mouse driver produces exactly that). With the daemon running, the tester shows `Pen tip brought near`,
+  `Stylus press/move` with pressure (5 to 75% in the test stroke), tilt and `(DRAW)`. An earlier hypothesis that
+  OTD's proximity event lacked a location and was misrouted was wrong and is withdrawn.
+* Net result: **0.6.8-rc1 delivers everything intuos3d does for the pen**, natively on Apple Silicon, with a GUI for
+  bindings. intuos3d is parked in its favour.
 
 ## Phase 0(b): wacom-driver-fix 6.3.15-3 (Rosetta)
 
