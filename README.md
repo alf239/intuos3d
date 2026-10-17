@@ -175,31 +175,33 @@ installer falls back to ad-hoc signing and warns. Stale `intuos3d` rows in Priva
 
 ### Verification status
 
-Done here, without touching the pen (nobody was at the desk):
+Verified with the real tablet on 2026-10-17 (log excerpts: `notes/first-session.log`):
 
-* Build: native arm64, no warnings of note, 508 lines of Swift.
-* Offline parser self-test (hand-built packets): proximity-in decodes tool id `0x823` (Grip Pen) and serial;
-  pen packet decodes x=20000, y=15000, pressure 512/1023, tilt 0/0, side button; max tilt +63/−64; eraser detected
-  from tool-id bit 3; pad packet decodes keys 1+6 and left strip segment 5; packets before a proximity-in are ignored.
-* Running under launchd: device matched (`tablet attached: PTZ-630, max input report 10 bytes`), mapping computed,
-  open refused pending Input Monitoring as expected.
+* Permissions: after granting Input Monitoring the driver restarted itself; `IOHIDManagerOpen` succeeded and the
+  mode switch read back `02 02` (`-> Intuos mode`). Grants survived later rebuilds thanks to the local certificate.
+* Pen (Grip Pen, tool id `0x823`, eraser end `0x82b`, same serial): 3183 pen packets, x 1413..33423,
+  y 5455..20293, distance 8..55, **pressure 0..1023 (full range)**, **tiltX -62..63, tiltY -64..63**, lower side
+  button seen as `d[1] & 2`. Proximity enter/exit pairs matched (13/13). No unparsed pen reports.
+* Apps: pressure strokes painted in Tayasui Sketches (which did not treat the eraser end as an eraser; the
+  proximity event is now also posted as a mouse event with the TabletProximity subtype for apps that only read
+  that form).
+* ExpressKeys: all 8 report as single bits in `d[5]` (left block) and `d[6]` (right block). Pressed in the user's
+  reading order, the left block produced bits 2, 0, 1, 3 and the right block 4, 5, 6, 7, so `expressKeys[i]` is
+  "bit i", not necessarily "i-th key from the top"; swap entries in the config to match the physical layout.
+* Strips: a one-hot 13-bit mask, **segment 1 at the top, 13 at the bottom**, moving one segment per report during
+  a swipe. A resting hand produced a 4↔1 flicker on the right strip; jumps of more than two segments are ignored.
 
-Still to do at the desk (5 minutes):
+Not yet verified: the upper pen side button (`d[1] & 4`, never pressed in range during the test), airbrush/marker
+packets, eraser recognition and tilt direction in Krita. For Krita: Settings → Configure Krita → Tablet Settings →
+"Open Tablet Tester" shows the live pressure, tilt and device type (stylus/eraser) Krita receives.
 
-1. Accept the two permission prompts (or tick `intuos3d` under System Settings → Privacy & Security →
-   Input Monitoring and Accessibility). Check `tail -f ~/Library/Logs/intuos3d.log` shows
-   `mode switch: ... -> Intuos mode`.
-2. HID report log: set `"logReports": true` in the config, `launchctl kickstart -k gui/$UID/local.intuos3d`,
-   bring the pen in, press, tilt, hit an ExpressKey, swipe a strip. Every raw report and parsed event is logged.
-   Confirm the strip direction matches the `leftStrip`/`rightStrip` order (swap the two entries if not), then turn
-   logging off again.
-3. Krita (installed via Homebrew, `/Applications/Krita.app`, universal binary): new canvas, a pressure-sensitive brush,
-   draw light and hard strokes; Settings → Configure Krita → Tablet Settings → "Open Tablet Tester" shows the live
-   pressure/tilt values Krita receives.
+To log raw reports: set `"logReports": true` in the config and `launchctl kickstart -k gui/$UID/local.intuos3d`;
+every HID report and parsed event goes to `~/Library/Logs/intuos3d.log`.
 
 ### Known limitations
 
 * Main display only; no per-app mappings; no pressure curve beyond a gamma exponent.
-* Touch-strip direction and the "scroll" sign are unverified against a real finger swipe.
+* Whether "scroll:-1" on a downward strip swipe scrolls the way you expect depends on your scrolling
+  preference; swap the two strip entries if not.
 * Airbrush wheel, marker rotation and the 4D mouse are parsed as plain pen/mouse packets or ignored.
 * The tablet stays in Intuos mode after the driver exits (macOS then sees no cursor movement from it) until replug.

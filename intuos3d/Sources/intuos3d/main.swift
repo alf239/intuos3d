@@ -78,8 +78,7 @@ IOHIDManagerRegisterInputReportCallback(manager, onReport, nil)
 IOHIDManagerScheduleWithRunLoop(manager, CFRunLoopGetMain(), CFRunLoopMode.defaultMode.rawValue)
 let openResult = IOHIDManagerOpen(manager, IOOptionBits(kIOHIDOptionsTypeNone))
 if openResult == kIOReturnSuccess {
-    opened = true
-    for d in (IOHIDManagerCopyDevices(manager) as? Set<IOHIDDevice>) ?? [] { setIntuosMode(d) }
+    opened = true  // matching callbacks arrive once the run loop starts and do the mode switch
 } else {
     log(String(format: "IOHIDManagerOpen failed: 0x%08x%@", openResult,
                openResult == kIOReturnNotPermitted ? " (Input Monitoring permission missing)" : ""))

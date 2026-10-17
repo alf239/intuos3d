@@ -22,9 +22,10 @@ struct Config: Codable {
     var penButton2 = PenButton.middle
     /// Actions for ExpressKeys 1-4 (left block, top to bottom) and 5-8 (right block). Held while pressed.
     var expressKeys = ["shift", "option", "cmd", "space", "cmd+z", "cmd+shift+z", "[", "]"]
-    /// Touch strips: [action when the finger moves to a higher segment, action for lower]. "scroll:N" or a key chord.
+    /// Touch strips: [action per segment when the finger slides down, action when it slides up].
+    /// Segment 1 is the top of the strip, 13 the bottom. "scroll:N" or a key chord.
     var leftStrip = ["scroll:-1", "scroll:1"]
-    var rightStrip = ["cmd+=", "cmd+-"]
+    var rightStrip = ["cmd+-", "cmd+="]
     /// Print every HID report and parsed event to the log (same as the --log flag).
     var logReports = false
 

@@ -90,10 +90,21 @@ final class EventOutput {
         var pressure: Double, tiltX: Double, tiltY: Double
     }
 
+    /// Posted twice: as a kCGEventTabletProximity event (NSEventTypeTabletProximity) and as a mouseMoved
+    /// event with the TabletProximity subtype, because apps listen to one or the other form.
     private func postProximity(enter: Bool, toolId: Int, serial: UInt64) {
-        guard let e = CGEvent(source: nil) else { return }
-        e.type = .tabletProximity
-        e.location = lastPoint
+        guard let prox = CGEvent(source: nil),
+              let moved = CGEvent(mouseEventSource: nil, mouseType: .mouseMoved, mouseCursorPosition: lastPoint, mouseButton: .left)
+        else { return }
+        prox.type = .tabletProximity
+        prox.location = lastPoint
+        moved.setIntegerValueField(.mouseEventSubtype, value: 2)  // kCGEventMouseSubtypeTabletProximity
+        for e in [prox, moved] { fillProximity(e, enter: enter, toolId: toolId, serial: serial) }
+        prox.post(tap: .cghidEventTap)
+        moved.post(tap: .cghidEventTap)
+    }
+
+    private func fillProximity(_ e: CGEvent, enter: Bool, toolId: Int, serial: UInt64) {
         e.setIntegerValueField(.tabletProximityEventVendorID, value: 0x056a)
         e.setIntegerValueField(.tabletProximityEventTabletID, value: 0x00b1)
         e.setIntegerValueField(.tabletProximityEventPointerID, value: 1)
@@ -105,7 +116,6 @@ final class EventOutput {
         e.setIntegerValueField(.tabletProximityEventCapabilityMask, value: capabilityMask)
         e.setIntegerValueField(.tabletProximityEventPointerType, value: pointerType)
         e.setIntegerValueField(.tabletProximityEventEnterProximity, value: enter ? 1 : 0)
-        e.post(tap: .cghidEventTap)
     }
 
     private func postPointer(_ p: TabletPoint, wanted: Int) {
@@ -164,6 +174,7 @@ final class EventOutput {
             let pos = strips[s], prev = stripPos[s]
             stripPos[s] = pos
             guard pos != 0, prev != 0, pos != prev else { continue }  // only finger motion, not touch/lift
+            guard abs(pos - prev) <= 2 else { continue }  // a resting hand flickers between far-apart segments
             let actions = s == 0 ? config.leftStrip : config.rightStrip
             let spec = pos > prev ? actions.first : actions.dropFirst().first
             KeyAction(spec ?? "none").tap(times: abs(pos - prev))

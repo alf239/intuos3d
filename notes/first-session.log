@@ -1,0 +1,98 @@
+2026-10-17T19:02:46Z intuos3d starting (pid 36688), config: /Users/alf/Library/Application Support/intuos3d/config.json
+2026-10-17T19:02:46Z mapping tablet area 0,3810 40640x22860 -> display 3840x2160
+2026-10-17T19:02:46Z mode switch: set=0x00000000 get=0x00000000 value=[02 02] -> Intuos mode
+2026-10-17T19:02:46Z waiting for tablet reports (use --log to print them)
+2026-10-17T19:02:46Z mode switch: set=0x00000000 get=0x00000000 value=[02 02] -> Intuos mode
+2026-10-17T19:07:22Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:07:23Z   -> proximityOut
+2026-10-17T19:07:24Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 4)
+2026-10-17T19:07:26Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 1)
+2026-10-17T19:07:26Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 4)
+2026-10-17T19:07:26Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 1)
+2026-10-17T19:07:26Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 4)
+2026-10-17T19:07:26Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 1)
+2026-10-17T19:07:27Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:07:27Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:07:28Z   -> proximityOut
+2026-10-17T19:07:29Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:07:29Z   -> proximityOut
+2026-10-17T19:07:29Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:07:33Z   -> proximityOut
+2026-10-17T19:07:34Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:07:35Z   -> proximityOut
+2026-10-17T19:07:44Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:07:47Z   -> proximityOut
+2026-10-17T19:07:47Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:07:49Z   -> proximityOut
+2026-10-17T19:08:08Z   -> proximityIn(toolId: 2091, serial: 119551814, kind: intuos3d.ToolKind.eraser)
+2026-10-17T19:08:10Z   -> proximityOut
+2026-10-17T19:08:10Z   -> proximityIn(toolId: 2091, serial: 119551814, kind: intuos3d.ToolKind.eraser)
+2026-10-17T19:08:20Z   -> proximityOut
+2026-10-17T19:08:25Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:08:30Z   -> proximityOut
+2026-10-17T19:08:31Z   -> pad(buttons: 4, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:31Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:31Z   -> pad(buttons: 1, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:31Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:32Z   -> pad(buttons: 2, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:32Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:32Z   -> pad(buttons: 8, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:32Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:33Z   -> pad(buttons: 16, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:34Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:34Z   -> pad(buttons: 32, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:34Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:34Z   -> pad(buttons: 64, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:35Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:35Z   -> pad(buttons: 128, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:35Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:49Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:08:49Z   -> proximityOut
+2026-10-17T19:08:53Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:08:55Z   -> proximityOut
+2026-10-17T19:08:56Z   -> pad(buttons: 0, leftStrip: 13, rightStrip: 0)
+2026-10-17T19:08:56Z   -> pad(buttons: 0, leftStrip: 12, rightStrip: 0)
+2026-10-17T19:08:56Z   -> pad(buttons: 0, leftStrip: 11, rightStrip: 0)
+2026-10-17T19:08:56Z   -> pad(buttons: 0, leftStrip: 10, rightStrip: 0)
+2026-10-17T19:08:56Z   -> pad(buttons: 0, leftStrip: 9, rightStrip: 0)
+2026-10-17T19:08:56Z   -> pad(buttons: 0, leftStrip: 8, rightStrip: 0)
+2026-10-17T19:08:56Z   -> pad(buttons: 0, leftStrip: 7, rightStrip: 0)
+2026-10-17T19:08:57Z   -> pad(buttons: 0, leftStrip: 6, rightStrip: 0)
+2026-10-17T19:08:57Z   -> pad(buttons: 0, leftStrip: 5, rightStrip: 0)
+2026-10-17T19:08:57Z   -> pad(buttons: 0, leftStrip: 4, rightStrip: 0)
+2026-10-17T19:08:57Z   -> pad(buttons: 0, leftStrip: 3, rightStrip: 0)
+2026-10-17T19:08:57Z   -> pad(buttons: 0, leftStrip: 2, rightStrip: 0)
+2026-10-17T19:08:57Z   -> pad(buttons: 0, leftStrip: 1, rightStrip: 0)
+2026-10-17T19:08:57Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 2)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 3)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 4)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 5)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 6)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 7)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 8)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 9)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 10)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 11)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 12)
+2026-10-17T19:08:58Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 13)
+2026-10-17T19:08:59Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 12)
+2026-10-17T19:08:59Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 11)
+2026-10-17T19:08:59Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 10)
+2026-10-17T19:08:59Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 9)
+2026-10-17T19:08:59Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 8)
+2026-10-17T19:08:59Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 7)
+2026-10-17T19:08:59Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 6)
+2026-10-17T19:08:59Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 5)
+2026-10-17T19:08:59Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 4)
+2026-10-17T19:09:00Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 3)
+2026-10-17T19:09:00Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 2)
+2026-10-17T19:09:00Z   -> pad(buttons: 0, leftStrip: 0, rightStrip: 0)
+2026-10-17T19:09:02Z   -> proximityIn(toolId: 2083, serial: 119551814, kind: intuos3d.ToolKind.pen)
+2026-10-17T19:09:03Z   -> proximityOut
+...
+# sample pen packets at max pressure:
+2026-10-17T19:07:32Z report 02 e0 2d b6 23 69 ff e9 cb 53
+2026-10-17T19:07:32Z   -> pen(intuos3d.PenState(x: 23405, y: 18131, distance: 20, pressure: 1023, tiltX: 19, tiltY: 11, buttons: 1))
+2026-10-17T19:07:32Z report 02 e0 2d a9 23 c5 ff ea 4a 53
+2026-10-17T19:07:32Z   -> pen(intuos3d.PenState(x: 23379, y: 18315, distance: 20, pressure: 1023, tiltX: 20, tiltY: 10, buttons: 1))
