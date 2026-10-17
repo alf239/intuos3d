@@ -1,4 +1,4 @@
-2026-10-17T19:02:46Z intuos3d starting (pid 36688), config: /Users/alf/Library/Application Support/intuos3d/config.json
+2026-10-17T19:02:46Z intuos3d starting (pid 36688), config: ~/Library/Application Support/intuos3d/config.json
 2026-10-17T19:02:46Z mapping tablet area 0,3810 40640x22860 -> display 3840x2160
 2026-10-17T19:02:46Z mode switch: set=0x00000000 get=0x00000000 value=[02 02] -> Intuos mode
 2026-10-17T19:02:46Z waiting for tablet reports (use --log to print them)

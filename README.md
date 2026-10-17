@@ -222,3 +222,7 @@ every HID report and parsed event goes to `~/Library/Logs/intuos3d.log`.
 * Airbrush wheel, marker rotation and the 4D mouse are parsed as plain pen/mouse packets or ignored.
 * `expressKeys[i]` is HID bit i; on this unit the left block's bits are not in top-to-bottom order.
 * The tablet stays in Intuos mode after the driver exits (macOS then sees no cursor movement from it) until replug.
+
+## License
+
+MIT, see `LICENSE`.
