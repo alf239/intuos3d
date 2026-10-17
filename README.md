@@ -4,13 +4,13 @@ Goal: pressure, tilt and ExpressKeys from a Wacom Intuos 3 PTZ-630 (USB `056a:00
 current macOS (tested host: macOS 27.0.1, Apple Silicon), with the least new code.
 
 **Route that worked: Phase 1, a ~500-line native Swift user-space driver (`intuos3d/`).**
-Both Phase 0 shortcuts fail for structural reasons, detailed below.
+Neither Phase 0 shortcut worked as shipped; details and one correction below.
 
 ## Verdict in one table
 
 | Route | Result | Why |
 |---|---|---|
-| (a) OpenTabletDriver 0.6.7 | ✗ | Has a `PTZ-630.json` config, but ships macOS as **x86_64 only** (Rosetta), reported *"No tablets were detected"*, and its macOS output backend posts **plain mouse CGEvents with no tablet subtype**, so no app can ever see pressure or tilt from it. |
+| (a) OpenTabletDriver 0.6.7 | ✗ (as shipped) | Has a `PTZ-630.json` config and its 0.6.x macOS backend does post pressure/tilt/eraser/proximity events, but it ships macOS as **x86_64 only** (Rosetta; CI already builds `osx-arm64`, see upstream issue 2955) and it never requests Input Monitoring, so the daemon silently reports *"No tablets were detected"*. Not re-tested with the permission granted by hand. |
 | (b) thenickdude/wacom-driver-fix 6.3.15-3 | ✗ (not installable unattended) | x86_64-only package that installs a kext, a LaunchAgent, a prefpane and a 2021-era Wacom daemon, requires an admin password and a **restart**, and was built for Catalina–Monterey. The daemon cannot be exercised without the full install (hardened runtime, hard-coded framework path). |
 | Phase 1 `intuos3d` | ✓ built, installed, running; waits on two permission grants | Native arm64, IOHIDManager + CGEvent, launch agent, parser verified against the Linux reference with an offline self-test. |
 
@@ -43,11 +43,16 @@ Both Phase 0 shortcuts fail for structural reasons, detailed below.
   (`notes/opentabletdriver-0.6.7-daemon.log`): it enumerated its whole config library and ended with
   `No tablets were detected.` It never prompted for Input Monitoring, so without that TCC grant HidSharp cannot
   open or match the device.
-* Decisive point regardless of the above: `OpenTabletDriver.Desktop/Interop/Input/MacOSVirtualMouse.cs`,
-  `MacOSAbsolutePointer.cs`, `MacOSRelativePointer.cs` only set `mouseEventDeltaX/Y`, button number and click state.
-  There is no `kCGMouseEventSubtype = TabletPoint`, no `kCGTabletEventPointPressure`, no proximity event.
-  **Pressure cannot reach any app through OTD on macOS today.** Nothing to upstream as a *config* change; the
-  missing piece is a tablet-aware macOS pointer in the daemon, which is a feature request, not a fix.
+* Correction to an earlier draft of this README: `master` (the unreleased 0.7 rewrite) has a macOS pointer that only
+  posts plain mouse events, but the **0.6.x branch that the 0.6.7 release is built from does implement tablet
+  events** (`MacOSVirtualMouse.cs`: `IPressureHandler`, `ITiltHandler`, `IEraserHandler`, proximity events with the
+  Wacom capability mask, tablet-subtype mouse events). So with Input Monitoring + Accessibility granted to
+  `OpenTabletDriver.app`, OTD would most likely deliver pressure on this tablet under Rosetta. The reasons it was not
+  pursued: no native arm64 release, no permission prompt (HidSharp never calls `IOHIDRequestAccess`, so the failure
+  is silent), and both drivers cannot run at once. Nothing to upstream as a *config* change; `PTZ-630.json` is
+  correct. Useful upstream contributions would be: an `osx-arm64` release asset (CI already builds it; issue 2955),
+  a call to `IOHIDRequestAccess` / a clear log line when `IOHIDManagerOpen` returns `kIOReturnNotPermitted`, and a
+  note in the macOS install guide that Input Monitoring must be granted.
 * The app is left installed but not running. Remove with `rm -rf /Applications/OpenTabletDriver.app
   ~/Library/Application\ Support/OpenTabletDriver`.
 
